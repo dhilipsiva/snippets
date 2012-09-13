@@ -1,0 +1,25 @@
+#Some common bash settings that I use
+export PS1="\e[1;36m\W\e[m \e[1;35m>\e[m " #A coloured prompt ;)
+alias ls="ls -G" #Colorful directory listing
+export LSCOLORS=dxfxcxdxbxegedabagacad 
+
+#Yes, I know this is wierd. But trust me Some time my mac acts wierd, too
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_COLLATE=C
+export LC_MONETARY="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_PAPER="en_US.UTF-8"
+export LC_NAME="en_US.UTF-8"
+export LC_ADDRESS="en_US.UTF-8"
+export LC_TELEPHONE="en_US.UTF-8"
+export LC_MEASUREMENT="en_US.UTF-8"
+export LC_IDENTIFICATION="en_US.UTF-8"
+
+#Activate python virtualenv. I usually keep those in ~/ENV directory.
+#usage :  $ _actv env-name
+function _act {
+    . ~/ENV/$1/bin/activate
+}

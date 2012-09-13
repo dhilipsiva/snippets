@@ -1,0 +1,28 @@
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set paste
+
+set number
+
+set nocompatible
+filetype off
+filetype plugin indent on
+
+set ignorecase
+set smartcase
+set incsearch
+
+"flake8 while saving file
+autocmd BufWritePost *.py call Flake8()
+
+
+syntax on
+
+if has("gui_running")
+    colorscheme koehler
+    set guifont=Monaco:h12.50
+    set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r  "remove right-hand scroll bar
+endif
