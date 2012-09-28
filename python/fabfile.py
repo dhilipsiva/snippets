@@ -16,10 +16,6 @@ from cuisine import run
 cuisine.select_package('apt')
 from fabric.api import cd, env, local, parallel, serial
 from fabric.api import put, run, settings, sudo
-
-	
-# Copyright 2011 Henri Siponen, Armens Movsesjans, Panu Salmi
-# License: GNU General Public License, version 2 or later
 import socket
 import paramiko
 from random import choice
