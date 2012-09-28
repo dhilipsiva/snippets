@@ -10,10 +10,11 @@ from fabric.context_managers import hide
 from fabric.operations import put, get
 import cuisine
 from cuisine import run
-cuisine.select_package('apt')
 from fabric.api import parallel
 from random import choice
 import string
+
+cuisine.select_package('apt')
 
 
 #vagrant
@@ -57,6 +58,7 @@ def apt(pkg):
     sudo("apt-get -qqyu install %s" % pkg)
 
 
+@task
 def sync_time():
     with settings(warn_only=True):
         sudo("/etc/init.d/ntp stop")
@@ -64,6 +66,7 @@ def sync_time():
         sudo("/etc/init.d/ntp start")
 
 
+@task
 def setup_time_calibration():
     sudo('apt-get -y install ntp')
     put('config/ntpdate.cron', '%s/' % env.NEWSBLUR_PATH)
@@ -73,16 +76,19 @@ def setup_time_calibration():
         sudo('/etc/cron.hourly/ntpdate')
 
 
+@task
 def add_machine_to_ssh():
     put("~/.ssh/id_dsa.pub", "local_keys")
     run("echo `cat local_keys` >> .ssh/authorized_keys")
     run("rm local_keys")
 
 
+@task
 def setup_supervisor():
     sudo('apt-get -y install supervisor')
 
 
+@task
 def setup_sudoers():
     sudo('su - root -c "echo \\\\"%s ALL=(ALL) NOPASSWD: ALL\\\\" >>'
             ' /etc/sudoers"' % env.user)
@@ -235,6 +241,7 @@ def file_remove(remotepath):
         sudo("rm -r %s" % remotepath)
 
 
+@task
 def generate_passwd(length=10):
     return ''.join(choice(string.ascii_letters +
         string.digits) for _ in range(length))
