@@ -17,6 +17,11 @@ import string
 cuisine.select_package('apt')
 
 
+@task
+def hello_world():
+    run('echo "hello world"')
+
+
 #vagrant
 @task
 def vagrant():
@@ -253,3 +258,21 @@ def ssh_disable_passwd():
     with settings(hide('running', 'user'), warn_only=True):
         sudo('echo PasswordAuthentication no >> /etc/ssh/sshd_config')
         sudo('service ssh restart')
+
+
+#copy archived git repo
+@task
+def copy_source():
+    local('git archive $(git symbolic-ref HEAD 2>/dev/null) '
+            '| bzip2 > /tmp/app_name.tar.bz2')
+    remote_filename = '/tmp/app_name.tar.bz2'
+    code_dir = '~/app_name'
+    sudo('rm -rf %s' % code_dir)
+    if cuisine.file_exists(remote_filename):
+        sudo('rm %s' % remote_filename)
+    cuisine.file_upload(remote_filename, '/tmp/app_name.tar.bz2')
+    with cuisine.mode_sudo():
+        run('mkdir -p %s' % code_dir)
+        cuisine.file_attribs(remote_filename)
+        run('tar jxf %s -C %s' % (remote_filename, code_dir))
+        run('rm %s' % (remote_filename,))
