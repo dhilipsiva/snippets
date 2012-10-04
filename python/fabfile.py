@@ -5,25 +5,26 @@ WARNING : UNTESTED Scripts
 #A Collection of commonly used fabric scripts.
 
 import re
-from fabric.api import task, env, local, sudo, settings
+from fabric.api import env, local, settings
 from fabric.context_managers import hide
 from fabric.operations import put, get
 import cuisine
-from cuisine import run
+from cuisine import run, sudo
 from fabric.api import parallel
 from random import choice
 import string
+import socket
+import paramiko
 
 cuisine.select_package('apt')
 
+USER_NAME = 'dhilipsiva'
 
-@task
+
 def hello_world():
     run('echo "hello world"')
 
 
-#vagrant
-@task
 def vagrant():
     host = '127.0.0.1'
     port = '2222'
@@ -57,13 +58,11 @@ def _prepare():
         ' DEBIAN_FRONTEND=noninteractive')
 
 
-@task
 def apt(pkg):
     _prepare()
     sudo("apt-get -qqyu install %s" % pkg)
 
 
-@task
 def sync_time():
     with settings(warn_only=True):
         sudo("/etc/init.d/ntp stop")
@@ -71,7 +70,6 @@ def sync_time():
         sudo("/etc/init.d/ntp start")
 
 
-@task
 def setup_time_calibration():
     sudo('apt-get -y install ntp')
     put('config/ntpdate.cron', '%s/' % env.NEWSBLUR_PATH)
@@ -81,25 +79,21 @@ def setup_time_calibration():
         sudo('/etc/cron.hourly/ntpdate')
 
 
-@task
 def add_machine_to_ssh():
     put("~/.ssh/id_dsa.pub", "local_keys")
     run("echo `cat local_keys` >> .ssh/authorized_keys")
     run("rm local_keys")
 
 
-@task
 def setup_supervisor():
     sudo('apt-get -y install supervisor')
 
 
-@task
 def setup_sudoers():
     sudo('su - root -c "echo \\\\"%s ALL=(ALL) NOPASSWD: ALL\\\\" >>'
             ' /etc/sudoers"' % env.user)
 
 
-@task
 @parallel
 def install(package):
     """Install a package"""
@@ -113,7 +107,6 @@ def install(package):
                 break
 
 
-@task
 @parallel
 def install_auto(package):
     """Install a package answering yes to all questions"""
@@ -124,7 +117,6 @@ def install_auto(package):
             % package)
 
 
-@task
 def install_apache():
     """Install Apache server with userdir enabled"""
     with settings(linewise=True, warn_only=True):
@@ -135,7 +127,6 @@ def install_apache():
             sudo("/etc/init.d/apache2 restart")
 
 
-@task
 @parallel
 def uninstall(package):
     """Uninstall a package"""
@@ -143,7 +134,6 @@ def uninstall(package):
         sudo("apt-get -y remove %s" % package)
 
 
-@task
 @parallel
 def update():
     """Update package list"""
@@ -151,7 +141,6 @@ def update():
         sudo('apt-get -yqq update')
 
 
-@task
 @parallel
 def upgrade():
     """Upgrade packages"""
@@ -160,7 +149,6 @@ def upgrade():
         sudo('aptitude -yvq safe-upgrade')
 
 
-@task
 @parallel
 def upgrade_auto():
     """Update apt-get and Upgrade apt-get answering yes to all questions"""
@@ -170,7 +158,6 @@ def upgrade_auto():
                 ' --force-yes -y')
 
 
-@task
 @parallel
 def user_add(new_user, passwd=False):
     """Add new user"""
@@ -184,7 +171,6 @@ def user_add(new_user, passwd=False):
                 sudo("chown %s:%s /home/%s/public_html/" % new_user)
 
 
-@task
 @parallel
 def user_passwd(user, passwd=False):
     """Change password for user"""
@@ -195,7 +181,6 @@ def user_passwd(user, passwd=False):
         passwd, passwd, user))
 
 
-@task
 @parallel
 def user_delete(user):
     """Delete user"""
@@ -203,7 +188,6 @@ def user_delete(user):
         sudo("deluser %s" % user)
 
 
-@task
 def status():
     """Display host status"""
     with settings(linewise=True, warn_only=True):
@@ -211,48 +195,41 @@ def status():
         run("uname -a")
 
 
-@task
 @parallel
 def shut_down():
     """Shut down a host"""
     sudo("shutdown -P 0")
 
 
-@task
 @parallel
 def reboot():
     """Reboot a host"""
     sudo("shutdown -r 0")
 
 
-@task
 def file_put(localpath, remotepath):
     """Put file from local path to remote path"""
     with settings(linewise=True, warn_only=True):
         put(localpath, remotepath)
 
 
-@task
 def file_get(remotepath, localpath):
     """Get file from remote path to local path"""
     with settings(linewise=True, warn_only=True):
         get(remotepath, localpath + '.' + env.host)
 
 
-@task
 def file_remove(remotepath):
     """Remove file at remote path"""
     with settings(linewise=True, warn_only=True):
         sudo("rm -r %s" % remotepath)
 
 
-@task
 def generate_passwd(length=10):
     return ''.join(choice(string.ascii_letters +
         string.digits) for _ in range(length))
 
 
-@task
 def ssh_disable_passwd():
     """Disable SSH password authentication"""
     with settings(hide('running', 'user'), warn_only=True):
@@ -261,7 +238,6 @@ def ssh_disable_passwd():
 
 
 #copy archived git repo
-@task
 def copy_source():
     local('git archive $(git symbolic-ref HEAD 2>/dev/null) '
             '| bzip2 > /tmp/app_name.tar.bz2')
@@ -276,3 +252,51 @@ def copy_source():
         cuisine.file_attribs(remote_filename)
         run('tar jxf %s -C %s' % (remote_filename, code_dir))
         run('rm %s' % (remote_filename,))
+
+
+def target():
+    host = 'A Target IP or name'
+    port = 22
+    env.hosts = ['{0}:{1}'.format(host, port)]
+    env.user = 'ubuntu'
+    env.key_filename = 'key file name'
+
+
+def create_user():
+    cuisine.user_ensure(USER_NAME,
+            home='/home/%s' % USER_NAME, shell='/bin/bash')
+    cuisine.group_user_ensure('www-data', USER_NAME)
+
+
+def create_virtualenv():
+    if not cuisine.dir_exists('/home/%s/ENV' % USER_NAME):
+        sudo('virtualenv -q --distribute '
+                '/home/%s/ENV' % (
+                USER_NAME), user=USER_NAME)
+
+
+def run_in_virtualenv(cmd):
+    with run('. /home/%s/ENV/bin/activate' % USER_NAME):
+        run(cmd)
+
+
+def is_host_up(host, counter=0):
+    print('%d : Attempting connection to host: %s' %
+            (counter, host))
+    original_timeout = socket.getdefaulttimeout()
+    socket.setdefaulttimeout(1)
+    host_up = True
+    try:
+        paramiko.Transport((host, 22))
+    except Exception, e:
+        host_up = False
+        print('%s down, %s' % (host, e))
+    finally:
+        socket.setdefaulttimeout(original_timeout)
+        return host_up
+
+
+def try_to_connect():
+    counter = 0
+    while not is_host_up(env.host, counter):
+        counter += 1
