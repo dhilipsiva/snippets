@@ -23,7 +23,7 @@ export LC_IDENTIFICATION="en_US.UTF-8"
 function _rewire {
     deactivate
     . ~/ENV/rewire/bin/activate
-    cd ~/Desktop/ReWire_Server
+    cd ~/Desktop/WIP/ReWire_Server
     pip freeze > requirements.txt
     cd server
 }
@@ -31,4 +31,11 @@ function _rewire {
 function _test {
     deactivate
     . ~/ENV/test/bin/activate
+}
+
+function _seer {
+    deactivate
+    . ~/ENV/seer/bin/activate
+    cd ~/Desktop/WIP/Seer
+    # pip freeze > requirements.txt
 }
