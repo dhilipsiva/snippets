@@ -39,3 +39,5 @@ function _seer {
     cd ~/Desktop/WIP/Seer
     # pip freeze > requirements.txt
 }
+
+tmux #Dont want to use the mac split panes. Loving tmux now-a-days
