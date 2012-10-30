@@ -1,7 +1,3 @@
-'''
-WARNING : UNTESTED Scripts
-'''
-
 #A Collection of commonly used fabric scripts.
 
 import re
@@ -300,3 +296,10 @@ def try_to_connect():
     counter = 0
     while not is_host_up(env.host, counter):
         counter += 1
+
+def ssh():
+    try:
+        if env.host == AWS_HOST:
+            local('ssh -i rewire.pem ubuntu@' + AWS_HOST)
+    except:
+        pass
