@@ -9,15 +9,19 @@ set incsearch       "instant search
 set nocompatible    "non compatibe
 set laststatus=2    "vim-powerline cfg
 set t_Co=256        "vim-powerline
+set hlsearch        "Highlight the search term
+
 
 let g:Powerline_symbols='unicode'           "vim-powerline
 let g:netrw_sort_sequence='\.py$,\.conf$'   "Sort sequence
+
 
 filetype off 
 filetype plugin indent on
 autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e`` "trim line endings
 syntax on
+
 
 if has("gui_running")
     colorscheme koehler         "favorite theme
@@ -26,6 +30,7 @@ if has("gui_running")
     set guioptions-=T           "remove toolbar
     set guioptions-=r           "remove right-hand scroll bar
 endif
+
 
 "I hate 'Modifiable is off' warnings. I dont properly understand how am I ending up with that error. This is a quick trick to restore writable state.
 func! DSModifiableOff()

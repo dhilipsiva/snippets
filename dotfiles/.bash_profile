@@ -40,4 +40,18 @@ function _seer {
     # pip freeze > requirements.txt
 }
 
-tmux #Dont want to use the mac split panes. Loving tmux now-a-days
+function _presspy {
+    deactivate
+    . ~/presspy/bin/activate
+    cd ~/Desktop/WIP/presspy
+    pip freeze > requirements.txt
+}
+
+function _setup_py_env {
+    curl https://gist.github.com/gists/4176838/download | pip install
+}
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
