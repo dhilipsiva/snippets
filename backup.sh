@@ -1,4 +1,4 @@
-#! usr/bin/bash
+#! /bin/bash
 
 echo 'copying bash_profile...'
 cp -f ~/.bash_profile dotfiles/

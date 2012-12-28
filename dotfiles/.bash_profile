@@ -20,34 +20,28 @@ export LC_TELEPHONE="en_US.UTF-8"
 export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 
-function _rewire {
-    deactivate
-    . ~/ENV/rewire/bin/activate
-    cd ~/Desktop/WIP/ReWire_Server
-    pip freeze > requirements.txt
-    cd server
+# My private bash scripts that I do not want to put on git hub. Top Secret :P
+. bash_secret.sh
+
+# A shortcut to open the current branch of the remote in browser. GitHub Helper 
+function gh { 
+    URL=`git remote show origin | grep Fetch\ URL | sed 's/Fetch URL: //' | sed 's/ //g' | sed 's/\.git//'`
+    BRANCH=`git rev-parse --abbrev-ref HEAD`
+    open "$URL/tree/$BRANCH"
 }
 
+# A python test environment to play expriment something.
 function _test {
     deactivate
     . ~/ENV/test/bin/activate
+    pip freeze > ~/test-env-requirements.txt
 }
 
-function _seer {
-    deactivate
-    . ~/ENV/seer/bin/activate
-    cd ~/Desktop/WIP/Seer
-    # pip freeze > requirements.txt
-}
+# Synchronize. pull and push are defined in `bash_secret.sh`
+alias syn="pull && push && gh"
 
-function _presspy {
-    deactivate
-    . ~/presspy/bin/activate
-    cd ~/Desktop/WIP/presspy
-    pip freeze > requirements.txt
-}
-
-function _setup_py_env {
+# Set of essential libraries to install in a new virtualenv
+function _install_py_musthaves {
     curl https://gist.github.com/gists/4176838/download | pip install
 }
 
@@ -55,3 +49,8 @@ function _setup_py_env {
 export PATH="/usr/local/heroku/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Shortcut to google search from commandline. Handy, huh?
+function google {
+    open "https://google.com/search?q=$*"
+}
