@@ -1,4 +1,4 @@
-#! usr/bin/bash
+#! /bin/bash
 echo 'initializing git...'
 git init
 
