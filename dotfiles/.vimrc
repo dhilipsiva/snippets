@@ -17,7 +17,6 @@ let g:netrw_sort_sequence='\.py$,\.conf$'   "Sort sequence
 
 
 filetype off 
-filetype plugin indent on
 autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e`` "trim line endings
 syntax on
@@ -39,3 +38,15 @@ func! DSModifiableOff()
     set number
 endfu
 :com! DSModOff call DSModifiableOff()
+
+"Vundle Configuration
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'davidhalter/jedi-vim'
+
+filetype plugin indent on

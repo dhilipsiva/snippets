@@ -54,3 +54,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 function google {
     open "https://google.com/search?q=$*"
 }
+
+function say_hello {
+ echo hello
+}
