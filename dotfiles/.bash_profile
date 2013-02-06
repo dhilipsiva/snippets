@@ -1,4 +1,4 @@
-export PS1='\[\033[1;35m\] \W \[\033[0m\]\[\033[1;36m\]->\[\033[0m\] '
+export PS1='\[\033[4;32m\]\A\[\033[0;0m\]\[\033[4;35m\] \W \[\033[4;36m\]->\[\033[0m\] '
 alias ls="ls -G"
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
