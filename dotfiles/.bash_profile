@@ -1,4 +1,4 @@
-export PS1="\e[1;36m\W\e[m \e[1;35m>\e[m "
+export PS1='\[\033[1;35m\] \W \[\033[0m\]\[\033[1;36m\]->\[\033[0m\] '
 alias ls="ls -G"
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
@@ -57,4 +57,14 @@ function google {
 
 function say_hello {
  echo hello
+}
+
+# Homebrew setting
+export PATH="/usr/local/sbin:$PATH"
+
+# Environment for http://DhilipSiva.com
+function _ds {
+    deactivate
+    . ~/ENV/ds/bin/activate
+    pip freeze > ~/test-env-requirements.txt
 }
