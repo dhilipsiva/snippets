@@ -4,7 +4,7 @@ export LSCOLORS=dxfxcxdxbxegedabagacad
 
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
-PATH="/usr/local/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+PATH="/usr/local/share/npm/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -55,16 +55,9 @@ function google {
     open "https://google.com/search?q=$*"
 }
 
-function say_hello {
+function _hello {
  echo hello
 }
 
 # Homebrew setting
 export PATH="/usr/local/sbin:$PATH"
-
-# Environment for http://DhilipSiva.com
-function _ds {
-    deactivate
-    . ~/ENV/ds/bin/activate
-    pip freeze > ~/test-env-requirements.txt
-}
