@@ -67,4 +67,5 @@ alias q="exit"
 function _misc_code_snippets {
     cd ~/Desktop/WIP/misc-code-snippets
     ./backup.sh
+    exit
 }
