@@ -1,19 +1,16 @@
 #! /bin/bash
 
 echo 'copying bash_profile...'
-cp -f ~/.bash_profile dotfiles/
+cp -f ~/.bash_profile ./
 
 echo 'copying gitconfig...'
-cp -f ~/.gitconfig dotfiles/
+cp -f ~/.gitconfig ./
 
 echo 'copying vimrc...'
-cp -f ~/.vimrc dotfiles/
+cp -f ~/.vimrc ./
 
 echo 'copying gitignore_global...'
-cp -f ~/.gitignore_global dotfiles/
-
-echo 'initializing git...'
-git init
+cp -f ~/.gitignore_global ./
 
 echo 'adding files to git...'
 git add .
@@ -22,4 +19,4 @@ echo 'commiting changes if any...'
 git commit -m 'Backup #4'
 
 echo 'pushing to origin...'
-git push
+git push origin master

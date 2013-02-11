@@ -1,9 +1,7 @@
 #! /bin/bash
-echo 'initializing git...'
-git init
 
 echo 'pullin files'
-git pull
+git pull origin master
 
 echo 'copying dotfiles'
-cp -rf dotfiles/ ~/
+cp -rf . ~/
