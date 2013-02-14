@@ -21,7 +21,7 @@ export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 
 # My private bash scripts that I do not want to put on git hub. Top Secret :P
-. bash_secret.sh
+. ~/bash_secret.sh
 
 # A shortcut to open the current branch of the remote in browser. GitHub Helper 
 function gh { 
