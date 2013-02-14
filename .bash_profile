@@ -51,7 +51,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Shortcut to google search from commandline. Handy, huh?
-function google {
+function _google {
     open "https://google.com/search?q=$*"
 }
 
@@ -68,4 +68,8 @@ function _misc_code_snippets {
     cd ~/Desktop/WIP/misc-code-snippets
     ./backup.sh
     exit
+}
+
+function _commit {
+    git commit --signoff -m "$*"
 }

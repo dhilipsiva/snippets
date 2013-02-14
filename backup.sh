@@ -16,7 +16,7 @@ echo 'adding files to git...'
 git add .
 
 echo 'commiting changes if any...'
-git commit -m 'Backup #4'
+_commit Backup #4
 
 echo 'pushing to origin...'
 git push origin master
