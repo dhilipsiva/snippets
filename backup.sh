@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Get environment variables
+. ~/.bash_profile
+
 echo 'copying bash_profile...'
 cp -f ~/.bash_profile ./
 
