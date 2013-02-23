@@ -22,6 +22,7 @@ def hello_world():
     run('echo "hello world"')
 
 
+# vagrant mechine
 def vagrant():
     host = '127.0.0.1'
     port = '2222'
