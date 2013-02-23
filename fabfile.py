@@ -12,6 +12,7 @@ import string
 import socket
 import paramiko
 
+# FIXME: select package after detecting appropriate system
 cuisine.select_package('apt')
 
 USER_NAME = 'dhilipsiva'
