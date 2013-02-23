@@ -18,7 +18,7 @@ def hello(path):
     app.logger.debug(request.headers)
     app.logger.debug(request.args)
     app.logger.debug(request.form)
-    return 'hello'
+    return 'Greetings, Earthling!'
 
 
 if __name__ == "__main__":
