@@ -17,7 +17,7 @@ let g:netrw_sort_sequence='\.py$,\.conf$'   "Sort sequence
 
 
 filetype off 
-"autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved
+autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved
 autocmd BufWritePre *.py :%s/\s\+$//e "Trim the line endings
 syntax on
 
