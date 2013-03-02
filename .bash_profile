@@ -73,3 +73,8 @@ function _misc_code_snippets {
 function _commit {
     git commit --signoff -m "$*"
 }
+
+# brew bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
