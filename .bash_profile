@@ -31,7 +31,7 @@ function gh {
 }
 
 # A python test environment to play expriment something.
-function _test {
+function @test {
     deactivate
     . ~/ENV/test/bin/activate
     pip freeze > ~/test-env-requirements.txt
@@ -41,7 +41,7 @@ function _test {
 alias syn="pull && push && gh"
 
 # Set of essential libraries to install in a new virtualenv
-function _install_py_musthaves {
+function @install_py_musthaves {
     curl https://gist.github.com/gists/4176838/download | pip install
 }
 
@@ -51,11 +51,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Shortcut to google search from commandline. Handy, huh?
-function _google {
+function @google {
     open "https://google.com/search?q=$*"
 }
 
-function _hello {
+function @hello {
  echo hello
 }
 
@@ -64,13 +64,13 @@ export PATH="/usr/local/sbin:$PATH"
 
 alias q="exit"
 
-function _misc_code_snippets {
+function @misc_code_snippets {
     cd ~/Desktop/WIP/misc-code-snippets
     ./backup.sh
     exit
 }
 
-function _commit {
+function @commit {
     git commit --signoff -m "$*"
 }
 
