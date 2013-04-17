@@ -78,3 +78,40 @@ function @commit {
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+# A tiny script to Compile the java file and run it if it compiles successfully.
+function j {
+    javac $1.java && java $1 $2
+}
+
+# This is just a shorthand to open the java samples folder.
+function @java {
+    cd ~/Desktop/WIP/java
+}
+
+# Edit commit history. WARNING: This is destructive in nature.
+function @commitcleanup {
+    git filter-branch --env-filter '
+        an="$GIT_AUTHOR_NAME"
+        am="$GIT_AUTHOR_EMAIL"
+        cn="$GIT_COMMITTER_NAME"
+        cm="$GIT_COMMITTER_EMAIL"
+ 
+        if [ "$GIT_COMMITTER_EMAIL" = "dhilipsiva@gmail.com" ]
+        then
+            cn="dhilipsiva"
+            cm="dhilipsiva@gmail.com"
+        fi
+        
+        if [ "$GIT_AUTHOR_EMAIL" = "dhilipsiva@gmail.com" ]
+        then
+            an="dhilipsiva"
+            am="dhilipsiva@gmail.com"
+        fi
+ 
+        export GIT_AUTHOR_NAME="$an"
+        export GIT_AUTHOR_EMAIL="$am"
+        export GIT_COMMITTER_NAME="$cn"
+        export GIT_COMMITTER_EMAIL="$cm"
+    '
+}

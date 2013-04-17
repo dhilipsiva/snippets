@@ -46,5 +46,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
