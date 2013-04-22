@@ -20,7 +20,7 @@ export LC_TELEPHONE="en_US.UTF-8"
 export LC_MEASUREMENT="en_US.UTF-8"
 export LC_IDENTIFICATION="en_US.UTF-8"
 
-# My private bash scripts that I do not want to put on git hub. Top Secret :P
+# My private bash scripts that I do not want to put on GitHub. Top Secret :P
 . ~/bash_secret.sh
 
 # A shortcut to open the current branch of the remote in browser. GitHub Helper 
@@ -114,4 +114,9 @@ function @commitcleanup {
         export GIT_COMMITTER_NAME="$cn"
         export GIT_COMMITTER_EMAIL="$cm"
     '
+}
+
+#Blah
+function blah {
+    echo "Blah Blah Blah"
 }
