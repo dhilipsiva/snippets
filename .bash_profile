@@ -120,3 +120,6 @@ function @commitcleanup {
 function blah {
     echo "Blah Blah Blah"
 }
+
+#mvim alias
+alias m="mvim"
