@@ -1,10 +1,10 @@
 export PS1='\[\033[4;35m\] \W \[\033[4;36m\]->\[\033[0m\] '
-alias ls="ls -G"
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/usr/local/share/npm/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+# Colored `ls` output on mac
+alias ls="ls -G"
+
+PATH="/usr/local/bin:${PATH}"
 export PATH
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -35,6 +35,7 @@ function @test {
     deactivate
     . ~/ENV/test/bin/activate
     pip freeze > ~/test-env-requirements.txt
+    cd ~/Desktop/WIP/test
 }
 
 # Synchronize. pull and push are defined in `bash_secret.sh`

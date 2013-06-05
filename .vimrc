@@ -49,3 +49,6 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
+
+execute pathogen#infect()
+autocmd vimenter * NERDTree
