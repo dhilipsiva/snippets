@@ -124,3 +124,4 @@ function blah {
 
 #mvim alias
 alias m="mvim"
+alias p="python"
