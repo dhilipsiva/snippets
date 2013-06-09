@@ -130,3 +130,10 @@ alias p="python"
 function dash {
     open "dash://$*"
 }
+
+# json-to-html
+function json-to-html {
+    . ~/ENV/json-to-html/bin/activate
+    cd ~/Desktop/WIP/json-to-html
+    pip freeze > requirements.txt
+}
