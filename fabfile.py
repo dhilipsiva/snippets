@@ -44,7 +44,7 @@ def vagrant():
 
         match = re.search(r'IdentityFile\s(.+)', line)
         if match:
-            env.key_filename = match.group(1)
+            env.key_filename = match.group(1).reaplce('"','')
             continue
 
     env.hosts = ['{0}:{1}'.format(host, port)]
