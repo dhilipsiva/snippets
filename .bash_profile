@@ -1,6 +1,9 @@
 export PS1='\[\033[4;35m\] \W \[\033[4;36m\]->\[\033[0m\] '
 export LSCOLORS=dxfxcxdxbxegedabagacad
 
+#test 
+
+
 # Colored `ls` output on mac
 alias ls="ls -G"
 
