@@ -140,3 +140,9 @@ function @json-to-html {
     cd ~/Desktop/WIP/json-to-html
     pip freeze > requirements.txt
 }
+
+
+# prints the current working branch of the git repo
+function @branch {
+    echo "BRANCH: $(git rev-parse --abbrev-ref HEAD)"
+}
