@@ -41,8 +41,18 @@ function @test {
     cd ~/Desktop/WIP/test
 }
 
-# Synchronize. pull and push are defined in `bash_secret.sh`
-alias syn="pull && push && gh"
+function pull {
+    git pull origin $(git rev-parse --abbrev-ref HEAD)
+}
+
+function push {
+    git push origin $(git rev-parse --abbrev-ref HEAD)
+}
+
+function syn {
+    pull && push
+
+}
 
 # Set of essential libraries to install in a new virtualenv
 function @install_py_musthaves {
@@ -129,6 +139,9 @@ function blah {
 alias m="mvim"
 alias p="python"
 
+# Django shell
+
+alias ds="python manage.py shell -i bpython"
 # open Dash docs
 function dash {
     open "dash://$*"

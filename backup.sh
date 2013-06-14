@@ -21,8 +21,5 @@ git add .
 echo 'commiting changes if any...'
 @commit "Backup #4"
 
-echo 'pulling from origin...'
-git pull origin master
-
-echo 'pushing to origin...'
-git push origin master
+echo 'syncing with remote'
+syn
