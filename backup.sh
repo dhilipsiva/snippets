@@ -16,7 +16,7 @@ echo 'copying gitignore_global...'
 cp -f ~/.gitignore_global ./
 
 echo 'adding files to git...'
-git add .
+git add --all .
 
 echo 'commiting changes if any...'
 @commit "Backup #4"
