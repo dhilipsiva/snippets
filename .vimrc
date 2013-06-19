@@ -52,3 +52,4 @@ filetype plugin indent on
 
 execute pathogen#infect()
 autocmd vimenter * NERDTree
+call pathogen#helptags()

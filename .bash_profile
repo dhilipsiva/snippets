@@ -26,13 +26,6 @@ export LC_IDENTIFICATION="en_US.UTF-8"
 # My private bash scripts that I do not want to put on GitHub. Top Secret :P
 . ~/bash_secret.sh
 
-# A shortcut to open the current branch of the remote in browser. GitHub Helper 
-function gh { 
-    URL=`git remote show origin | grep Fetch\ URL | sed 's/Fetch URL: //' | sed 's/ //g' | sed 's/\.git//'`
-    BRANCH=`git rev-parse --abbrev-ref HEAD`
-    open "$URL/tree/$BRANCH"
-}
-
 # A python test environment to play expriment something.
 function @test {
     deactivate
@@ -41,17 +34,26 @@ function @test {
     cd ~/Desktop/WIP/test
 }
 
-function pull {
+function @pull {
     git pull origin $(git rev-parse --abbrev-ref HEAD)
 }
 
-function push {
+function @push {
     git push origin $(git rev-parse --abbrev-ref HEAD)
 }
 
-function syn {
-    pull && push
 
+function @fetch {
+    git fetch origin $(git rev-parse --abbrev-ref HEAD)
+}
+
+
+function @add {
+    git add --all .
+}
+
+function @syn {
+    @fetch && @push
 }
 
 # Set of essential libraries to install in a new virtualenv
@@ -93,11 +95,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-# A tiny script to Compile the java file and run it if it compiles successfully.
-function j {
-    javac $1.java && java $1 $2
-}
-
 # This is just a shorthand to open the java samples folder.
 function @java {
     cd ~/Desktop/WIP/java
@@ -131,7 +128,7 @@ function @commitcleanup {
 }
 
 #Blah
-function blah {
+function @blah {
     echo "Blah Blah Blah"
 }
 
@@ -143,7 +140,7 @@ alias p="python"
 
 alias ds="python manage.py shell -i bpython"
 # open Dash docs
-function dash {
+function @dash {
     open "dash://$*"
 }
 
@@ -158,4 +155,10 @@ function @json-to-html {
 # prints the current working branch of the git repo
 function @branch {
     echo "BRANCH: $(git rev-parse --abbrev-ref HEAD)"
+}
+
+function @bangpypers {
+    . ~/ENV/bangpypers/bin/activate
+    cd ~/Desktop/WIP/bangpypers
+    pip freeze > requirements.txt
 }
