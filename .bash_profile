@@ -85,7 +85,6 @@ function @misc_code_snippets {
     cd ~/Desktop/WIP/misc-code-snippets
     ./backup.sh
     popd
-    popd
 }
 
 function @commit {
