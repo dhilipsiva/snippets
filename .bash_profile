@@ -168,3 +168,8 @@ function @bangpypers {
 function t {
     date "+ TIME: %H:%M:%S %n DATE: %d %a, %b(%m)"
 }
+
+# Run Django server
+function rs {
+    ./manage.py runserver
+}
