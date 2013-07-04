@@ -22,4 +22,5 @@ echo 'commiting changes if any...' &&\
 @commit "Backup #4" &&\
 
 echo 'syncing with remote' &&\
-syn
+@pull &&\
+@push

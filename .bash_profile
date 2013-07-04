@@ -81,9 +81,9 @@ export PATH="/usr/local/sbin:$PATH"
 alias q="exit"
 
 function @misc_code_snippets {
-    cd ~/Desktop/WIP/misc-code-snippets
-    ./backup.sh
-    exit
+    cd ~/Desktop/WIP/misc-code-snippets &&\
+        ./backup.sh &&\
+        exit
 }
 
 function @commit {
