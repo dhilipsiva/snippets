@@ -162,3 +162,8 @@ function @bangpypers {
     cd ~/Desktop/WIP/bangpypers
     pip freeze > requirements.txt
 }
+
+# shortcut to print date and time
+function t {
+    date "+ TIME: %H:%M:%S %n DATE: %d %a, %b(%m)"
+}
