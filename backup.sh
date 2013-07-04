@@ -22,7 +22,6 @@ echo 'adding files to git...'
 
 echo 'commiting changes if any...'
 read -p "Commit Message: " msg
-echo $msg 
 if [ "$msg" = "" ]; then
     msg="Backup #4"
 else
