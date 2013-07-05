@@ -15,6 +15,8 @@ alias ds="python manage.py shell -i bpython"
 alias ls="ls -G"
 alias add="git add --all"
 alias st="git status"
+alias es="elasticsearch -f"
+
 # My private bash scripts that I do not want to put on GitHub. Top Secret :P
 . ~/bash_secret.sh
 
