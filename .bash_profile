@@ -1,30 +1,24 @@
+#exports
+export LANG="en_US.UTF-8"
 export PS1='\[\033[4;35m\] \W \[\033[4;36m\]->\[\033[0m\] '
 export LSCOLORS=dxfxcxdxbxegedabagacad
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:$PATH"
 
-#test 
-
-
-# Colored `ls` output on mac
+#aliases
+alias q="exit"
+alias blah="echo 'Blah Blah Blah'"
+alias m="mvim"
+alias p="python"
+alias rs="./manage.py runserver"
+alias t='date "+ TIME: %H:%M%n DATE: %d %a, %b(%m)"'
+alias ds="python manage.py shell -i bpython"
 alias ls="ls -G"
-
-PATH="/usr/local/bin:${PATH}"
-export PATH
-export LANG="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8"
-export LC_NUMERIC="en_US.UTF-8"
-export LC_TIME="en_US.UTF-8"
-export LC_COLLATE=C
-export LC_MONETARY="en_US.UTF-8"
-export LC_MESSAGES="en_US.UTF-8"
-export LC_PAPER="en_US.UTF-8"
-export LC_NAME="en_US.UTF-8"
-export LC_ADDRESS="en_US.UTF-8"
-export LC_TELEPHONE="en_US.UTF-8"
-export LC_MEASUREMENT="en_US.UTF-8"
-export LC_IDENTIFICATION="en_US.UTF-8"
-
+alias add="git add --all"
+alias st="git status"
 # My private bash scripts that I do not want to put on GitHub. Top Secret :P
 . ~/bash_secret.sh
+
+# Functions
 
 # A python test environment to play expriment something.
 function @test {
@@ -42,18 +36,8 @@ function @push {
     git push origin $(git rev-parse --abbrev-ref HEAD)
 }
 
-
-function @fetch {
-    git fetch origin $(git rev-parse --abbrev-ref HEAD)
-}
-
-
-function @add {
-    git add --all .
-}
-
 function @syn {
-    @fetch && @push
+    @pull && @push
 }
 
 # Set of essential libraries to install in a new virtualenv
@@ -62,7 +46,6 @@ function @install_py_musthaves {
 }
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -71,14 +54,6 @@ function @google {
     open "https://google.com/search?q=$*"
 }
 
-function @hello {
- echo hello
-}
-
-# Homebrew setting
-export PATH="/usr/local/sbin:$PATH"
-
-alias q="exit"
 
 function @misc_code_snippets {
     pushd .
@@ -96,10 +71,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-# This is just a shorthand to open the java samples folder.
-function @java {
-    cd ~/Desktop/WIP/java
-}
 
 # Edit commit history. WARNING: This is destructive in nature.
 function @commitcleanup {
@@ -128,18 +99,6 @@ function @commitcleanup {
     '
 }
 
-#Blah
-function @blah {
-    echo "Blah Blah Blah"
-}
-
-#mvim alias
-alias m="mvim"
-alias p="python"
-
-# Django shell
-
-alias ds="python manage.py shell -i bpython"
 # open Dash docs
 function @dash {
     open "dash://$*"
@@ -150,13 +109,7 @@ function @json-to-html {
     . ~/ENV/json-to-html/bin/activate
     cd ~/Desktop/WIP/json-to-html
     pip freeze > requirements.txt
-}
-
-
-# prints the current working branch of the git repo
-function @branch {
-    echo "BRANCH: $(git rev-parse --abbrev-ref HEAD)"
-}
+}    
 
 function @bangpypers {
     . ~/ENV/bangpypers/bin/activate
@@ -164,12 +117,6 @@ function @bangpypers {
     pip freeze > requirements.txt
 }
 
-# shortcut to print date and time
-function t {
-    date "+ TIME: %H:%M:%S %n DATE: %d %a, %b(%m)"
-}
-
-# Run Django server
-function rs {
-    ./manage.py runserver
+function @br {
+    echo "BRANCH: $(git rev-parse --abbrev-ref HEAD)"
 }

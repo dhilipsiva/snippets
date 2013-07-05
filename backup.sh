@@ -18,7 +18,7 @@ echo 'copying gitignore_global...'
 cp -f ~/.gitignore_global ./
 
 echo 'adding files to git...'
-@add
+git add --all
 
 echo 'commiting changes if any...'
 read -p "Commit Message: " msg
