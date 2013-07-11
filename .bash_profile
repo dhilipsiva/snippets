@@ -113,6 +113,13 @@ function @json-to-html {
     pip freeze > requirements.txt
 }    
 
+function @ml {
+    deactivate
+    . ~/ENV/ml/bin/activate
+    cd ~/Desktop/WIP/ml
+    pip freeze > requirements.txt
+}
+
 function @bangpypers {
     . ~/ENV/bangpypers/bin/activate
     cd ~/Desktop/WIP/bangpypers
@@ -121,4 +128,12 @@ function @bangpypers {
 
 function @br {
     echo "BRANCH: $(git rev-parse --abbrev-ref HEAD)"
+}
+
+function @mail {
+    if [[ $1 = "ly" ]]; then
+        rvm use current && vmail -c ~/.vmailrc-ly
+    else
+        rvm use current && vmail
+    fi
 }
