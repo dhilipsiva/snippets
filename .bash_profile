@@ -13,7 +13,7 @@ alias rs="./manage.py runserver"
 alias t='date "+ TIME: %H:%M%n DATE: %d %a, %b(%m)"'
 alias ds="python manage.py shell -i bpython"
 alias ls="ls -G"
-alias add="git add --all"
+alias add="git add --all ."
 alias st="git status"
 alias es="elasticsearch -f"
 
