@@ -15,6 +15,8 @@ set hlsearch        "Highlight the search term
 let g:Powerline_symbols='unicode'           "vim-powerline
 let g:netrw_sort_sequence='\.py$,\.conf$'   "Sort sequence
 
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
 
 filetype off 
 autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved
@@ -51,5 +53,4 @@ Bundle 'Lokaltog/vim-powerline'
 filetype plugin indent on
 
 execute pathogen#infect()
-autocmd vimenter * NERDTree
 call pathogen#helptags()
