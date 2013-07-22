@@ -10,6 +10,7 @@ set nocompatible    "non compatibe
 set laststatus=2    "vim-powerline cfg
 set t_Co=256        "vim-powerline
 set hlsearch        "Highlight the search term
+set wildignore=*.swp,*.bak,*.pyc,*.class
 
 
 let g:Powerline_symbols='unicode'           "vim-powerline
