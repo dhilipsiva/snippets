@@ -14,6 +14,7 @@ set hlsearch        "Highlight the search term
 
 let g:Powerline_symbols='unicode'           "vim-powerline
 let g:netrw_sort_sequence='\.py$,\.conf$'   "Sort sequence
+let NERDTreeIgnore = ['\.pyc$']             "NERDTree ignore filetypes
 
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
