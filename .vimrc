@@ -12,6 +12,9 @@ set t_Co=256        "vim-powerline
 set hlsearch        "Highlight the search term
 set wildignore=*.swp,*.bak,*.pyc,*.class
 
+execute pathogen#infect()
+call pathogen#helptags()
+
 
 let g:Powerline_symbols='unicode'           "vim-powerline
 let g:netrw_sort_sequence='\.py$,\.conf$'   "Sort sequence
@@ -25,14 +28,6 @@ autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 syntax on
 
-
-if has("gui_running")
-    colorscheme koehler         "favorite theme
-    set guifont=Monaco:h12.50   "favorite font
-    set guioptions-=m           "remove menu bar
-    set guioptions-=T           "remove toolbar
-    set guioptions-=r           "remove right-hand scroll bar
-endif
 
 
 "I hate 'Modifiable is off' warnings. I dont properly understand how am I ending up with that error. This is a quick trick to restore writable state.
@@ -51,5 +46,12 @@ endfu
 
 filetype plugin indent on
 
-execute pathogen#infect()
-call pathogen#helptags()
+
+"post Pathogen functions
+colorscheme asu1dark
+if has("gui_running")
+    set guifont=Monaco:h12.50   "favorite font
+    set guioptions-=m           "remove menu bar
+    set guioptions-=T           "remove toolbar
+    set guioptions-=r           "remove right-hand scroll bar
+endif
