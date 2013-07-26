@@ -20,9 +20,9 @@ let NERDTreeIgnore = ['\.pyc$']             "NERDTree ignore filetypes
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 
-filetype off 
+filetype off
 autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved
-autocmd BufWritePre *.py :%s/\s\+$//e "Trim the line endings
+autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 syntax on
 
 
@@ -43,14 +43,11 @@ func! DSModifiableOff()
 endfu
 :com! DSModOff call DSModifiableOff()
 
-"Vundle Configuration
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-powerline'
+"function to auto indent (:A) entire file
+func! AutoIndentFile()
+    gg=G
+endfu
+:com! A call AutoIndentFile()
 
 filetype plugin indent on
 

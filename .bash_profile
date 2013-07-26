@@ -9,7 +9,7 @@ alias q="exit"
 alias blah="echo 'Blah Blah Blah'"
 alias m="mvim"
 alias p="python"
-alias rs="./manage.py runserver"
+alias rs="./manage.py runserver 0.0.0.0:8000"
 alias t='date "+ TIME: %H:%M%n DATE: %d %a, %b(%m)"'
 alias ds="python manage.py shell -i bpython"
 alias ls="ls -G"
@@ -56,7 +56,6 @@ function @google {
     open "https://google.com/search?q=$*"
 }
 
-
 function @misc_code_snippets {
     pushd .
     cd ~/Desktop/WIP/misc-code-snippets
@@ -64,8 +63,12 @@ function @misc_code_snippets {
     popd
 }
 
+function @backup {
+    @misc_code_snippets
+}
+
 function @commit {
-    git commit --signoff -m "$*"
+    git commit -m "$*"
 }
 
 # brew bash completion
@@ -81,19 +84,19 @@ function @commitcleanup {
         am="$GIT_AUTHOR_EMAIL"
         cn="$GIT_COMMITTER_NAME"
         cm="$GIT_COMMITTER_EMAIL"
- 
+
         if [ "$GIT_COMMITTER_EMAIL" = "dhilipsiva@gmail.com" ]
         then
             cn="dhilipsiva"
             cm="dhilipsiva@gmail.com"
         fi
-        
+
         if [ "$GIT_AUTHOR_EMAIL" = "dhilipsiva@gmail.com" ]
         then
             an="dhilipsiva"
             am="dhilipsiva@gmail.com"
         fi
- 
+
         export GIT_AUTHOR_NAME="$an"
         export GIT_AUTHOR_EMAIL="$am"
         export GIT_COMMITTER_NAME="$cn"
@@ -111,7 +114,7 @@ function @json-to-html {
     . ~/ENV/json-to-html/bin/activate
     cd ~/Desktop/WIP/json-to-html
     pip freeze > requirements.txt
-}    
+}
 
 function @ml {
     deactivate
