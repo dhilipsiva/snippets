@@ -140,3 +140,8 @@ function @mail {
         rvm use current && vmail
     fi
 }
+
+# function to download youtube video
+function @yt {
+    youtube-dl --max-quality mp4 $*
+}

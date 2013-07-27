@@ -19,6 +19,7 @@ call pathogen#helptags()
 let g:Powerline_symbols='unicode'           "vim-powerline
 let g:netrw_sort_sequence='\.py$,\.conf$'   "Sort sequence
 let NERDTreeIgnore = ['\.pyc$']             "NERDTree ignore filetypes
+let g:gitgutter_enabled = 0                 "Disable GitGutter by default
 
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
@@ -55,3 +56,6 @@ if has("gui_running")
     set guioptions-=T           "remove toolbar
     set guioptions-=r           "remove right-hand scroll bar
 endif
+
+"Disable CoffeeSpaceError
+hi link coffeeSpaceError NONE
