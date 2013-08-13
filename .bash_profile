@@ -145,3 +145,11 @@ function @mail {
 function @yt {
     youtube-dl --max-quality mp4 $*
 }
+
+function @nave {
+    nave use 0.10.15
+}
+
+function search {
+    grep -irl --exclude=\*.{pyc,swp,un~,png,jpg} --exclude-dir=".git" --color "$*" .
+}
