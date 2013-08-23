@@ -51,7 +51,7 @@ filetype plugin indent on
 "post Pathogen functions
 colorscheme asu1dark
 if has("gui_running")
-    set guifont=Monaco:h12.50   "favorite font
+    set guifont=Monaco:h14   "favorite font
     set guioptions-=m           "remove menu bar
     set guioptions-=T           "remove toolbar
     set guioptions-=r           "remove right-hand scroll bar
