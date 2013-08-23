@@ -7,7 +7,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:$PATH"
 #aliases
 alias q="exit"
 alias blah="echo 'Blah Blah Blah'"
-alias m="mvim"
 alias p="python"
 alias rs="./manage.py runserver 0.0.0.0:8000"
 alias t='date "+ TIME: %H:%M%n DATE: %d %a, %b(%m)"'
@@ -21,6 +20,14 @@ alias es="elasticsearch -f"
 . ~/bash_secret.sh
 
 # Functions
+
+function m {
+    if [[ $1 = "" ]]; then
+        mvim .
+    else
+        mvim $*
+    fi
+}
 
 # A python test environment to play expriment something.
 function @test {
@@ -68,7 +75,12 @@ function @backup {
 }
 
 function @commit {
-    git commit -m "$*"
+    if [[ $1 = "" ]]; then
+        git commit -m "Quick commit"
+    else
+        git commit -m "$*"
+    fi
+
 }
 
 # brew bash completion
