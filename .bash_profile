@@ -38,15 +38,23 @@ function @test {
 }
 
 function @pull {
-    git pull origin $(git rev-parse --abbrev-ref HEAD)
+    if [[ $1 = "" ]]; then
+        git pull origin $(git rev-parse --abbrev-ref HEAD)
+    else
+        git pull $1 $(git rev-parse --abbrev-ref HEAD)
+    fi
 }
 
 function @push {
-    git push origin $(git rev-parse --abbrev-ref HEAD)
+    if [[ $1 = "" ]]; then
+        git pull origin $(git rev-parse --abbrev-ref HEAD)
+    else
+        git pull $1 $(git rev-parse --abbrev-ref HEAD)
+    fi
 }
 
 function @syn {
-    @pull && @push
+    @pull $* && @push $*
 }
 
 # Set of essential libraries to install in a new virtualenv
@@ -80,7 +88,6 @@ function @commit {
     else
         git commit -m "$*"
     fi
-
 }
 
 # brew bash completion
