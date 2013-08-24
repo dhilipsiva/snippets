@@ -47,9 +47,9 @@ function @pull {
 
 function @push {
     if [[ $1 = "" ]]; then
-        git pull origin $(git rev-parse --abbrev-ref HEAD)
+        git push origin $(git rev-parse --abbrev-ref HEAD)
     else
-        git pull $1 $(git rev-parse --abbrev-ref HEAD)
+        git push $1 $(git rev-parse --abbrev-ref HEAD)
     fi
 }
 
