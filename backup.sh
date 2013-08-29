@@ -17,6 +17,10 @@ cp -f ~/.vimrc ./
 echo 'copying gitignore_global...'
 cp -f ~/.gitignore_global ./
 
+
+echo 'copying Makefile'
+cp -f ~/Makefile ./
+
 echo 'adding files to git...'
 git add --all
 

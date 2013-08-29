@@ -15,6 +15,8 @@ alias ls="ls -G"
 alias add="git add --all ."
 alias st="git status"
 alias es="elasticsearch -f"
+alias d="git diff"
+alias dc="git diff --cached"
 
 # My private bash scripts that I do not want to put on GitHub. Top Secret :P
 . ~/bash_secret.sh
@@ -34,7 +36,7 @@ function @test {
     deactivate
     . ~/ENV/test/bin/activate
     pip freeze > ~/test-env-requirements.txt
-    cd ~/Desktop/WIP/test
+    cd ~/WIP/test
 }
 
 function @pull {
@@ -73,7 +75,7 @@ function @google {
 
 function @misc_code_snippets {
     pushd .
-    cd ~/Desktop/WIP/misc-code-snippets
+    cd ~/WIP/misc-code-snippets
     ./backup.sh
     popd
 }
@@ -131,20 +133,20 @@ function @dash {
 # json-to-html
 function @json-to-html {
     . ~/ENV/json-to-html/bin/activate
-    cd ~/Desktop/WIP/json-to-html
+    cd ~/WIP/json-to-html
     pip freeze > requirements.txt
 }
 
 function @ml {
     deactivate
     . ~/ENV/ml/bin/activate
-    cd ~/Desktop/WIP/ml
+    cd ~/WIP/ml
     pip freeze > requirements.txt
 }
 
 function @bangpypers {
     . ~/ENV/bangpypers/bin/activate
-    cd ~/Desktop/WIP/bangpypers
+    cd ~/WIP/bangpypers
     pip freeze > requirements.txt
 }
 
