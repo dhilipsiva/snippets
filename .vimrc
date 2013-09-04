@@ -49,7 +49,7 @@ filetype plugin indent on
 
 
 "post Pathogen functions
-colorscheme asu1dark
+colorscheme ansi_blows
 if has("gui_running")
     set guifont=Monaco:h14   "favorite font
     set guioptions-=m           "remove menu bar

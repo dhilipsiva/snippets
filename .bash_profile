@@ -2,7 +2,8 @@
 export LANG="en_US.UTF-8"
 export PS1='\[\033[4;35m\] \W \[\033[4;36m\]->\[\033[0m\] '
 export LSCOLORS=dxfxcxdxbxegedabagacad
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/usr/local/cuda/bin:$PATH"
+export CUDA_ROOT="/usr/local/cuda/bin"
 
 #aliases
 alias q="exit"
@@ -129,6 +130,13 @@ function @commitcleanup {
 function @dash {
     open "dash://$*"
 }
+
+function @pycon {
+    . ~/ENV/pycon/bin/activate
+    cd ~/WIP/pycon
+    pip freeze > requirements.txt
+}
+
 
 # json-to-html
 function @json-to-html {
