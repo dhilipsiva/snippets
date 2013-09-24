@@ -16,15 +16,13 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 
-let g:Powerline_symbols='unicode'           "vim-powerline
-let g:netrw_sort_sequence='\.py$,\.conf$'   "Sort sequence
 let NERDTreeIgnore = ['\.pyc$']             "NERDTree ignore filetypes
 let g:gitgutter_enabled = 0                 "Disable GitGutter by default
 
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 
-filetype off
+filetype on
 autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 syntax on
@@ -61,3 +59,4 @@ endif
 "Disable CoffeeSpaceError
 hi link coffeeSpaceError NONE
 let g:syntastic_mode_map={ 'mode': 'active', 'passive_filetypes': ['html'] }
+let python_highlight_all = 1

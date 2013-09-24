@@ -158,6 +158,15 @@ function @bangpypers {
     pip freeze > requirements.txt
 }
 
+# irc email bridge
+# https://github.com/dhilipsiva/irc-email-bridge
+function @ieb {
+    deactivate
+    . ~/ENV/ieb/bin/activate
+    cd ~/WIP/ieb
+    pip freeze > requirements.txt
+}
+
 function @br {
     echo "BRANCH: $(git rev-parse --abbrev-ref HEAD)"
 }
@@ -181,4 +190,22 @@ function @nave {
 
 function search {
     grep -irl --exclude=\*.{pyc,swp,un~,png,jpg} --exclude-dir=".git" --color "$*" .
+}
+
+# rm function to replace terminal's irrecoverable, disastrous, hear-breaking rm command.
+# I just lost some important files forever :(
+function rm () {
+  local path
+  for path in "$@"; do
+    # ignore any arguments
+    if [[ "$path" = -* ]]; then :
+    else
+      local dst=${path##*/}
+      # append the time if necessary
+      while [ -e ~/.Trash/"$dst" ]; do
+        dst="$dst "$(date +%H-%M-%S)
+      done
+      mv "$path" ~/.Trash/"$dst"
+    fi
+  done
 }
