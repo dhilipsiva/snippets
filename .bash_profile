@@ -1,6 +1,6 @@
 #exports
 export LANG="en_US.UTF-8"
-export PS1='\[\033[4;35m\] \W \[\033[4;36m\]->\[\033[0m\] '
+export PS1=' \[\033[4;35m\]\W \[\033[4;36m\]->\[\033[0m\] '
 export LSCOLORS=dxfxcxdxbxegedabagacad
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/usr/local/cuda/bin:$PATH"
 export CUDA_ROOT="/usr/local/cuda/bin"
@@ -11,7 +11,7 @@ alias blah="echo 'Blah Blah Blah'"
 alias p="python"
 alias rs="./manage.py runserver 0.0.0.0:8000"
 alias t='date "+ TIME: %H:%M%n DATE: %d %a, %b(%m)"'
-alias ds="python manage.py shell -i bpython"
+alias ds="./manage.py shell -i bpython"
 alias ls="ls -G"
 alias add="git add --all ."
 alias st="git status"
