@@ -1,4 +1,4 @@
-source: http://en.wikipedia.org/wiki/List_of_pangrams
+This is used for testing purpose for when I build International apps.
 
 
 ## Arabic
