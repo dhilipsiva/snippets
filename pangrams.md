@@ -10,12 +10,12 @@ Arabic:
 أبجد هوز ترتيب الحروف العبرية والعربية من اللغات الساميَّة
 
 
-Azeri:
+## Azeri
 
 Zəfər, jaketini də papağını da götür, bu axşam hava çox soyuq olacaq
 
 
-Bulgarian:
+## Bulgarian
 
 Ах чудна българска земьо, полюшквай цъфтящи жита
 Жълтата дюля беше щастлива, че пухът, който цъфна, замръзна като гьон
@@ -32,7 +32,7 @@ Bulgarian:
 Щурчо Цоньо хапваше ловджийско кюфте с бяла гъмза.
 
 
-Catalan:
+## Catalan
 
 Jove xef, porti whisky amb quinze glaçons d'hidrogen, coi!
 Aqueix betzol, Jan, comprava whisky de figa
@@ -40,12 +40,12 @@ Zel de grum: quetxup, whisky, cafè, bon vi; ja!
 Coi! quinze jans golafres de Xàtiva, beuen whisky a pams
 
 
-Croatian:
+## Croatian
 
 Gojazni đačić s biciklom drži hmelj i finu vatu u džepu nošnje.
 
 
-Czech:
+## Czech
 
 Nechť již hříšné saxofony ďáblů rozezvučí síň úděsnými tóny waltzu, tanga a quickstepu.
 Příšerně žluťoučký kůň úpěl ďábelské ódy
@@ -55,19 +55,19 @@ Loď čeří kýlem tůň obzvlášť v Grónské úžině.
 Ó, náhlý déšť již zvířil prach a čilá laň teď běží s houfcem gazel k úkrytům.
 
 
-Danish:
+## Danish
 
 Høj bly gom vandt fræk sexquiz på wc
 Quizdeltagerne spiste jordbær med fløde, mens cirkusklovnen Walther spillede på xylofon.
 
 
-Divehi:
+## Divehi
 
 ވިލިފުށީ ބާރްތްޑޭ ޕާޓީގެ ރަމްޒަކީ ޗިޅިޔާޖެހި އަސްދޫންޏޭ
 ބޮޑު ބުޅާ ދުވެގޮސް ސަޅި ޒުވާން މޮޔަ މީދާ ވައްޓައި މަރާ ޗިސްކޮށް ފުންޏަކައް ޖަހައްޕޯ
 
 
-Dutch:
+## Dutch
 
 Lynx c.q. vos prikt bh: dag zwemjuf!
 Doch Bep, flink sexy qua vorm, zwijgt
@@ -78,29 +78,29 @@ Max boft: z'n vrouw is qua type degelijk
 Lex bederft Uw quiz met typisch vakjargon
 
 
-Dzongkha:
+## Dzongkha
 
 ཨ་ཡིག་དཀར་མཛེས་ལས་འཁྲུངས་ཤེས་བློའི་གཏེར༎ ཕས་རྒོལ་ཝ་སྐྱེས་ཟིལ་གནོན་གདོང་ལྔ་བཞིན༎ ཆགས་ཐོགས་ཀུན་བྲལ་མཚུངས་མེད་འཇམ་དབྱངསམཐུས༎ མཧཱ་མཁས་པའི་གཙོ་བོ་ཉིད་འགྱུར་ཅིག།
 
 
-Esperanto:
+## Esperanto
 
 Eble ĉiu kvazaŭ-deca fuŝĥoraĵo ĝojigos homtipon
 Laŭ Ludoviko Zamenhof bongustas freŝa ĉeĥa manĝaĵo kun spicoj.
 
 
-Estonian:
+## Estonian
 
 Põdur Zagrebi tšellomängija-följetonist Ciqo külmetas kehvas garaažis
 See väike mölder jõuab rongile hüpata
 
 
-Eesti:
+## Eesti
 
 Jubedalt möirgav lõukoer hüppas tänaval
 
 
-Finnish:
+## Finnish
 
 Törkylempijävongahdus
 Albert osti fagotin ja töräytti puhkuvan melodian.
@@ -111,7 +111,7 @@ Charles Darwin jammaili Åken hevixylofonilla Qatarin yöpub Zeligissä.
 Wieniläinen sioux'ta puhuva ökyzombie diggaa Åsan roquefort-tacoja.
 
 
-French:
+## French
 
 Buvez de ce whisky que le patron juge fameux.
 Portez ce vieux whisky au juge blond qui fume
@@ -121,19 +121,20 @@ Voix ambiguë d'un cœur qui au zéphyr préfère les jattes de kiwi
 Monsieur Jack, vous dactylographiez bien mieux que votre ami Wolf
 
 
-West Frisian:
+## West Frisian
 
 Alve bazige froulju wachtsje op dyn komst
 
 
-German
+## German
+
 Sylvia wagt quick den Jux bei Pforzheim
 Franz jagt im komplett verwahrlosten Taxi quer durch Bayern
 Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich
 Falsches Üben von Xylophonmusik quält jeden größeren Zwerg
 
 
-
+##
 
 Greek:
 
@@ -144,7 +145,7 @@ Xeskepazó tin psychofthóra vdelygmía.
 Ζαφείρι δέξου πάγκαλο, βαθῶν ψυχῆς τὸ σῆμα.
 
 
-
+##
 Hebrew:
 
 דג סקרן שט בים מאוכזב ולפתע מצא חברה
@@ -155,31 +156,31 @@ Hebrew:
 לכן חכו לי נאם יהוה ליום קומי לעד, כי משפטי לאסף גוים לקבצי ממלכות, לשפך עליהם זעמי כל חרון אפי, כי באש קנאתי תאכל כל הארץ
 
 
-Hungarian:
+## Hungarian
 
 Jó foxim és don Quijote húszwattos lámpánál ülve egy pár bűvös cipőt készít.
 
 
-Icelandic:
+## Icelandic
 
 Kæmi ný öxi hér, ykist þjófum nú bæði víl og ádrepa.
 Svo hölt, yxna kýr þegði jú um dóp í fé á bæ.
 
 
-Indonesian:
+## Indonesian
 
 Muharjo seorang xenofobia universal yang takut pada warga jazirah, contohnya Qatar.
 Saya lihat foto Hamengkubuwono XV bersama enam zebra purba cantik yang jatuh dari Alquranmu.
 
 
-Irish:
+## Irish
 
 D'fhuascail Íosa Úrmhac na hÓighe Beannaithe pór Éava agus Ádhaimh
 D'ḟuascail Íosa Úrṁac na hÓiġe Beannaiṫe pór Éaḃa agus Áḋaiṁ
 Ċuaiġ bé ṁórṡáċ le dlúṫspád fíorḟinn trí hata mo ḋea-ṗorcáin ḃig
 
 
-Italian:
+## Italian
 
 Quel fez sghembo copre davanti
 Ma la volpe, col suo balzo, ha raggiunto il quieto Fido.
@@ -193,7 +194,7 @@ Qualche vago ione tipo zolfo, bromo, sodio.
 Berlusconi? Quiz, tv, paghe da fame.
 
 
-Japanese:
+## Japanese
 
 いろはにほへと ちりぬるを わかよたれそ つねならむ うゐのおくやま けふこえて あさきゆめみし ゑひもせす（ん）
 色は匂へど 散りぬるを 我が世誰ぞ 常ならむ 有為の奥山 今日越えて 浅き夢見じ 酔ひもせず（ん）
@@ -205,44 +206,44 @@ Japanese:
 田居に出で 菜摘むわれをぞ 君召すと 求食り追ひゆく 山城の 打酔へる子ら 藻葉干せよ え舟繋けぬ
 
 
-Javanese:
+## Javanese
 
 ꧋ ꦲꦤꦕꦫꦏ꧈ ꦢꦠꦱꦮꦭ꧈ ꦥꦝꦗꦪꦚ꧈ ꦩꦒꦧꦛꦔ꧉
 
 
-Klingon:
+## Klingon
 
     
 
 
-Korean:
+## Korean
 
 키스의 고유조건은 입술끼리 만나야 하고 특별한 기술은 필요치 않다.
 
 
-Latin:
+## Latin
 
 Sic fugiens, dux, zelotypos, quam Karus haberis.
 
 
-Latvian:
+## Latvian
 
 Muļķa hipiji mēģina brīvi nogaršot celofāna žņaudzējčūsku.
 Glāžšķūņa rūķīši dzērumā čiepj Baha koncertflīģeļu vākus.
 Četri psihi faķīri vēlu vakarā zāģēja guļbūvei durvis, fonā šņācot mežam.
 
 
-Lithuanian:
+## Lithuanian
 
 Įlinkdama fechtuotojo špaga sublykčiojusi pragręžė apvalų arbūzą
 
 
-Lojban:
+## Lojban
 
 .o'i mu xagji sofybakni cu zvati le purdi
 
 
-Macedonian:
+## Macedonian
 
 Ѕидарски пејзаж: шугав билмез со чудење џвака ќофте и кељ на туѓ цех.
 Бучниов жолт џин ѕида куќа со фурна меѓу полиња за цреши, хмељ и грозје.
@@ -250,22 +251,22 @@ Macedonian:
 Мојот дружељубив коњ со тих галоп фаќа брз џиновски глушец по туѓо ѕидче.
 
 
-Mapudungun:
+## Mapudungun
 
 Gvxam mincetu apocikvyeh: ñizol ce mamvj ka raq kuse bafkeh mew
 
 
-Mongolian:
+## Mongolian
 
 Щётканы фермд пийшин цувъя. Бөгж зогсч хэльюү.
 
 
-Myanmar:
+## Myanmar
 
 သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေးဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။
 
 
-Norwegian:
+## Norwegian
 
 Vår sære Zulu fra badeøya spilte jo whist og quickstep i min taxi.
 Høvdingens kjære squaw får litt pizza i Mexico by.
@@ -274,7 +275,7 @@ Sær golfer med kølle vant sexquiz på wc i hjemby.
 Jeg begynte å fortære en sandwich mens jeg kjørte taxi på vei til quiz
 
 
-Polish:
+## Polish
 
 Jeżu klątw, spłódź cyjhjbm część gry hańb!
 Pójdźże, kiń tę chmurność w głąb flaszy!
@@ -288,7 +289,7 @@ Ich dalekopis fałszuje, gdy próby QXV nie wytrzymuje.
 Koń i żółw grali w kości z piękną ćmą u źródła.
 
 
-Portuguese:
+## Portuguese
 
 Um pequeno jabuti xereta viu dez cegonhas felizes.
 Blitz prende ex-vesgo com cheque fajuto.
@@ -298,7 +299,7 @@ Luís argüia à Júlia que «brações, fé, chá, óxido, pôr, zângão» era
 À noite, vovô Kowalsky vê o ímã cair no pé do pingüim queixoso e vovó põe açúcar no chá de tâmaras do jabuti feliz.
 
 
-Romanian:
+## Romanian
 
 Muzicologă în bej vând whisky și tequila, preț fix.
 Bând whisky, jazologul șprițuit vomă fix în tequila.
@@ -306,7 +307,7 @@ Ex-sportivul își fumează jucăuș țigara bând whisky cu tequila.
 Înjurând pițigăiat, zoofobul comandă vexat whisky și tequila.
 
 
-Russian:
+## Russian
 
 чащах юга жил бы цитрус? Да, но фальшивый экземпляр!
 В чащах юга жил бы цитрус? Да, но фальшивый экземпляръ!
@@ -318,12 +319,12 @@ Russian:
 Наш банк вчера же выплатил Ф.Я. Эйхгольду комиссию за ценные вещи.
 
 
-Scottish Gaelic:
+## Scottish Gaelic
 
 Mus d'fhàg Cèit-Ùna ròp Ì le ob.
 
 
-Serbian:
+## Serbian
 
 Gojazni đačić s biciklom drži hmelj i finu vatu u džepu nošnje.
 Fin džip, gluh jež i čvrst konjić dođoše bez moljca.
@@ -333,13 +334,13 @@ Ljubazni fenjerdžija čađavog lica hoće da mi pokaže štos.
 Ajšo, lepoto i čežnjo, za ljubav srca moga dođi u Hadžiće na kafu.
 
 
-Slovak:
+## Slovak
 
 Kŕdeľ ďatľov učí koňa žrať kôru.
 Kŕdeľ šťastných ďatľov učí pri ústí Váhu mĺkveho koňa obhrýzať kôru a žrať čerstvé mäso.
 
 
-Slovenian:
+## Slovenian
 
 Hišničin bratec vzgaja polže pod fikusom.
 Besni dirkač iz formule žuga cehu poštarjev.
@@ -349,7 +350,7 @@ Piškur molče grabi fižol z dna cezijeve hoste.
 V kožuščku hudobnega fanta stopiclja mizar.
 
 
-Spanish:
+## Spanish
 
 El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja.
 El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío; añoraba a su querido cachorro.
@@ -360,25 +361,25 @@ Whisky bueno: ¡excitad mi frágil pequeña vejez!
 Es extraño mojar queso en la cerveza o probar whisky de garrafa.
 
 
-Swedish:
+## Swedish
 
 Flygande bäckasiner söka hwila på mjuka tuvor.
 Yxskaftbud, ge vår WC-zonmö IQ-hjälp.
 Gud hjälpe Zorns mö qvickt få byxa.
 
 
-Thai:
+## Thai
 
 เป็นมนุษย์สุดประเสริฐเลิศคุณค่า กว่าบรรดาฝูงสัตว์เดรัจฉาน จงฝ่าฟันพัฒนาวิชาการ อย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร ไม่ถือโทษโกรธแช่งซัดฮึดฮัดด่า หัดอภัยเหมือนกีฬาอัชฌาสัย ปฏิบัติประพฤติกฎกำหนดใจ พูดจาให้จ๊ะๆ จ๋าๆ น่าฟังเอยฯ
 นายสังฆภัณฑ์ เฮงพิทักษ์ฝั่ง ผู้เฒ่าซึ่งมีอาชีพเป็นฅนขายฃวด ถูกตำรวจปฏิบัติการจับฟ้องศาล ฐานลักนาฬิกาคุณหญิงฉัตรชฎา ฌานสมาธิ[7][2]
 
 
-Tibetan:
+## Tibetan
 
 ༈ དཀར་མཛེས་ཨ་ཡིག་ལས་འཁྲུངས་ཡེ་ཤེས་གཏེར། །ཕས་རྒོལ་ཝ་སྐྱེས་ཟིལ་གནོན་གདོང་ལྔ་བཞིན། །ཆགས་ཐོགས་ཀུན་བྲལ་མཚུངས་མེད་འཇམ་བྱངས་མཐུས། །མ་ཧཱ་མཁས་པའི་གཙོ་བོ་ཉིད་གྱུར་ཅིག།
 
 
-Turkish:
+## Turkish
 
 Pijamalı hasta yağız şoföre çabucak güvendi.
 Saf ve haydut kız çocuğu bin plaj görmüş.
@@ -388,25 +389,25 @@ Vakfın çoğu bu huysuz genci plajda görmüştü.
 Fahiş bluz güvencesi yağdırma projesi çöktü.
 
 
-Ukrainian:
+## Ukrainian
 
 Чуєш їх, доцю, га? Кумедна ж ти, прощайся без ґольфів!
 Жебракують філософи при ґанку церкви в Гадячі, ще й шатро їхнє п'яне знаємо.
 
 
-Urdu:
+## Urdu
 
 ٹھنڈ میں، ایک قحط زده گاؤں سے گذرتے وقت ایک چڑچڑے، باأثر وفارغ شخص کو بعض جلپری نما اژدہے نظر آئے۔
 ژالہ باری میں ر‌ضائی کو غلط اوڑھے بیٹھی قرأة العین اور عظمٰی کے پاس گھر کے ذخیرے سے آناً فاناً ڈش میں ثابت جو، صراحی میں چائے اور پلیٹ میں زرده آیا۔
 
 
-Uyghur:
+## Uyghur
 
 ئاۋۇ بىر جۈپ خوراز فرانسىيەنىڭ پارىژ شەھرىگە يېقىن تاغقا كۆچەلمىدى.
 زۆھرەگۈل ئابدۇۋاجىت فرانسىيەنىڭ پارىژدىكى خېلى بىشەم ئوقۇغۇچى.
 
 
-Czech:
+## Czech
 Příliš žluťoučký kůň úpěl ďábelské ódy
 Příšerně žluťoučký kůň úpěl ďábelské ódy
 Hleď, toť přízračný kůň v mátožné póze šíleně úpí
@@ -416,7 +417,7 @@ Loď čeří kýlem tůň obzvlášť v Grónské úžině
 Červený střízlíček a špinavá žlůva ďobali šťavnaté ocúny.
 
 
-Danish:
+## Danish
 Ærøål
 Færøbåd
 Kødpålæg
@@ -428,46 +429,46 @@ Efterårsjævndøgn
 Masseødelæggelsesvåben
 
 
-Esperanto:
+## Esperanto
 
 Eĥoŝanĝo ĉiuĵaŭde, preskaŭ freŝa ĉeĥa manĝaĵo
 
 
-German:
+## German
 
 Heizölrückstoßabdämpfung
 
 
-Hungarian:
+## Hungarian
 
 árvíztűrő tükörfúrógép
 
 
-Icelandic:
+## Icelandic
 
 Sævör grét áðan því úlpan var ónýt
 
 
-Norwegian:
+## Norwegian
 
 Blåbærsyltetøy
 
 
-Polish:
+## Polish
 
 Zażółć gęślą jaźń
 
 
-Turkish:
+## Turkish
 
 Şişli'de büyük çöp yığınları
 
 
-Slovak:
+## Slovak
 
 Päťtýždňové vĺčatá nervózne štekajú na môjho ďatľa v tŕní.
 
 
-Swedish:
+## Swedish
 
 Räksmörgås, Ölälskaråsna, Läderfåtölj, Åland är österut, señor Müller
