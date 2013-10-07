@@ -93,6 +93,19 @@ function @commit {
     fi
 }
 
+function update {
+    brew update
+    brew doctor
+    brew upgrade
+    pushd .
+    cd ~/.vim
+    make
+    add
+    @commit "Updating Plugins"
+    @syn
+    popd
+}
+
 # brew bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
