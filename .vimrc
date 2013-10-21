@@ -1,6 +1,3 @@
-set tabstop=4       "1 tab equals 4 columns
-set shiftwidth=4    "ditto
-set expandtab       "expand tabs to spaces
 set paste           "use ctrl-p or cmd-p to paste
 set number          "line numbers
 set ignorecase      "ignore case while searching
@@ -9,8 +6,7 @@ set incsearch       "instant search
 set nocompatible    "non compatibe
 set laststatus=2    "vim-powerline cfg
 set t_Co=256        "vim-powerline
-set hlsearch        "Highlight the search term
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set hlsearch        "Highlight the search termset wildignore=*.swp,*.bak,*.pyc,*.claset
 
 execute pathogen#infect()
 call pathogen#helptags()
@@ -21,8 +17,11 @@ let g:gitgutter_enabled = 0                 "Disable GitGutter by default
 let g:email = "dhilipsiva@gmail.com"
 let g:username = "dhilipsiva"
 
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+set tabstop=4
+set shiftwidth=4
+au BufNewFile,BufReadPost *.coffee,*.rb setl tabstop=2 shiftwidth=2
 
+set expandtab
 
 filetype on
 autocmd BufWritePost *.py call Flake8() "apply flake8 as files are saved

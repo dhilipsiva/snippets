@@ -135,9 +135,7 @@ Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich
 Falsches Üben von Xylophonmusik quält jeden größeren Zwerg
 
 
-##
-
-Greek:
+## Greek
 
 Τάχιστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός
 Tákhistè alôpèx vaphês psèménè gè, draskelízei ypér nòthroý kynós
@@ -146,8 +144,7 @@ Xeskepazó tin psychofthóra vdelygmía.
 Ζαφείρι δέξου πάγκαλο, βαθῶν ψυχῆς τὸ σῆμα.
 
 
-##
-Hebrew:
+## Hebrew
 
 דג סקרן שט בים מאוכזב ולפתע מצא חברה
 כך התרסק נפץ על גוזל קטן, שדחף את צבי למים
