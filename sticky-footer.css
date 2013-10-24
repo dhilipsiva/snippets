@@ -1,0 +1,21 @@
+/*
+ * sticky-footer.css
+ * Copyright (C) 2013 dhilipsiva
+ *
+ * Distributed under terms of the MIT license.
+ */
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+.footer, .push {
+    height: 4em;
+}

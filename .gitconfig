@@ -17,3 +17,5 @@
 	trustExitCode = true
 [github]
 	user = dhilipsiva
+[diff]
+	tool = vimdiff
