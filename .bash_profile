@@ -9,7 +9,6 @@ export CUDA_ROOT="/usr/local/cuda/bin"
 alias q="exit"
 alias blah="echo 'Blah Blah Blah'"
 alias p="python"
-alias rs="./manage.py runserver 0.0.0.0:8000"
 alias @t='date "+ TIME: %H:%M%n DATE: %d %a, %b(%m)"'
 alias ds="./manage.py shell -i bpython"
 alias ls="ls -G"
@@ -29,6 +28,14 @@ function m {
         mvim .
     else
         mvim $*
+    fi
+}
+
+function rs {
+    if [[ $1 = "" ]]; then
+        ./manage.py runserver 0.0.0.0:8000
+    else
+        ./manage.py runserver 0.0.0.0:$1
     fi
 }
 
