@@ -17,9 +17,11 @@ cp -f ~/.vimrc ./
 echo 'copying gitignore_global...'
 cp -f ~/.gitignore_global ./
 
-
 echo 'copying Makefile'
-cp -f ~/Makefile ./
+cp -f ~/update.sh ./
+
+echo 'copying public key'
+cp -f ~/.ssh/id_rsa.pub ./.ssh/
 
 echo 'adding files to git...'
 git add --all
@@ -35,5 +37,4 @@ echo $msg
 @commit "$msg"
 
 echo 'syncing with remote'
-@pull
-@push
+@syn

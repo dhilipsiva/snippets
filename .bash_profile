@@ -2,8 +2,18 @@
 export LANG="en_US.UTF-8"
 export PS1=' \[\033[4;35m\]\W \[\033[4;36m\]->\[\033[0m\] '
 export LSCOLORS=dxfxcxdxbxegedabagacad
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:/usr/local/cuda/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/opt/ruby/bin:$PATH"
 export CUDA_ROOT="/usr/local/cuda/bin"
+
+#en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+
 
 #aliases
 alias q="exit"
@@ -205,7 +215,7 @@ function @yt {
 }
 
 function @nave {
-    nave use 0.10.15
+    nave.sh use 0.11.9
 }
 
 function search {
