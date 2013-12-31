@@ -1,12 +1,13 @@
+runtime bundle/pathogen/autoload/pathogen.vim
+
 set paste           "use ctrl-p or cmd-p to paste
 set number          "line numbers
 set ignorecase      "ignore case while searching
 set smartcase       "if camel-cased, dont ignore case
 set incsearch       "instant search
 set nocompatible    "non compatibe
-set laststatus=2    "vim-powerline cfg
-set t_Co=256        "vim-powerline
 set hlsearch        "Highlight the search termset wildignore=*.swp,*.bak,*.pyc,*.claset
+
 
 execute pathogen#infect()
 call pathogen#helptags()
@@ -61,3 +62,5 @@ endif
 hi link coffeeSpaceError NONE
 let g:syntastic_mode_map={ 'mode': 'active', 'passive_filetypes': ['html'] }
 let python_highlight_all = 1
+
+delc Vsplit
