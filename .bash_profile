@@ -77,11 +77,6 @@ function @syn {
     @pull $* && @push $*
 }
 
-# Set of essential libraries to install in a new virtualenv
-function @install_py_musthaves {
-    curl https://gist.github.com/gists/4176838/download | pip install
-}
-
 ### Added by the Heroku Toolbelt
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -98,10 +93,6 @@ function @misc_code_snippets {
     popd
 }
 
-function @backup {
-    @misc_code_snippets
-}
-
 function @commit {
     if [[ $1 = "" ]]; then
         git commit -m "Quick commit"
@@ -110,82 +101,14 @@ function @commit {
     fi
 }
 
-function update {
-    brew update
-    brew doctor
-    brew upgrade
-    pushd .
-    cd ~/.vim
-    make
-    add
-    @commit "Updating Plugins"
-    @syn
-    popd
-}
-
 # brew bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-
-# Edit commit history. WARNING: This is destructive in nature.
-function @commitcleanup {
-    git filter-branch --env-filter '
-        an="$GIT_AUTHOR_NAME"
-        am="$GIT_AUTHOR_EMAIL"
-        cn="$GIT_COMMITTER_NAME"
-        cm="$GIT_COMMITTER_EMAIL"
-
-        if [ "$GIT_COMMITTER_EMAIL" = "dhilipsiva@gmail.com" ]
-        then
-            cn="dhilipsiva"
-            cm="dhilipsiva@gmail.com"
-        fi
-
-        if [ "$GIT_AUTHOR_EMAIL" = "dhilipsiva@gmail.com" ]
-        then
-            an="dhilipsiva"
-            am="dhilipsiva@gmail.com"
-        fi
-
-        export GIT_AUTHOR_NAME="$an"
-        export GIT_AUTHOR_EMAIL="$am"
-        export GIT_COMMITTER_NAME="$cn"
-        export GIT_COMMITTER_EMAIL="$cm"
-    '
-}
-
 # open Dash docs
 function @dash {
     open "dash://$*"
-}
-
-function @pycon {
-    . ~/ENV/pycon/bin/activate
-    cd ~/WIP/pycon
-    pip freeze > requirements.txt
-}
-
-
-# json-to-html
-function @json-to-html {
-    . ~/ENV/json-to-html/bin/activate
-    cd ~/WIP/json-to-html
-    pip freeze > requirements.txt
-}
-
-function @ml {
-    deactivate
-    . ~/ENV/ml/bin/activate
-    cd ~/WIP/ml
-    pip freeze > requirements.txt
-}
-
-function @bangpypers {
-    . ~/ENV/bangpypers/bin/activate
-    cd ~/WIP/bangpypers
-    pip freeze > requirements.txt
 }
 
 # irc email bridge
@@ -199,19 +122,6 @@ function @ieb {
 
 function @br {
     echo "BRANCH: $(git rev-parse --abbrev-ref HEAD)"
-}
-
-function @mail {
-    if [[ $1 = "ly" ]]; then
-        rvm use current && vmail -c ~/.vmailrc-ly
-    else
-        rvm use current && vmail
-    fi
-}
-
-# function to download youtube video
-function @yt {
-    youtube-dl --max-quality mp4 $*
 }
 
 function @nave {
