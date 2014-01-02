@@ -51,9 +51,13 @@ function rs {
 
 # A python test environment to play expriment something.
 function @test {
-    deactivate
     . ~/ENV/test/bin/activate
     pip freeze > ~/test-env-requirements.txt
+    cd ~/WIP/test
+}
+
+function @testf {
+    . ~/ENV/testf/bin/activate
     cd ~/WIP/test
 }
 
@@ -114,7 +118,6 @@ function @dash {
 # irc email bridge
 # https://github.com/dhilipsiva/irc-email-bridge
 function @ieb {
-    deactivate
     . ~/ENV/ieb/bin/activate
     cd ~/WIP/ieb
     pip freeze > requirements.txt
