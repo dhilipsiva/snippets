@@ -64,3 +64,4 @@ let g:syntastic_mode_map={ 'mode': 'active', 'passive_filetypes': ['html'] }
 let python_highlight_all = 1
 
 delc Vsplit
+let g:templates_no_autocmd = 1
