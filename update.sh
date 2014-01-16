@@ -6,7 +6,10 @@
 # Distributed under terms of the MIT license.
 #
 
-
+gem update --system
+gem update
 brew update
 brew upgrade
+brew cleanup
+brew prune
 cd .vim && make
