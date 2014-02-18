@@ -24,7 +24,6 @@ alias ds="./manage.py shell -i bpython"
 alias ls="ls -G"
 alias add="git add --all ."
 alias st="git status"
-alias es="elasticsearch -f"
 alias d="git diff"
 alias dc="git diff --cached"
 
@@ -59,6 +58,12 @@ function @test {
 function @testf {
     . ~/ENV/testf/bin/activate
     cd ~/WIP/test
+}
+
+function @mec-gems {
+    # MEC GEMS Presentation
+    . ~/ENV/mec-gems/bin/activate
+    cd ~/WIP/mec-gems
 }
 
 function @pull {
