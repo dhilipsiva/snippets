@@ -139,3 +139,8 @@ function @nave {
 function search {
     grep -irl --exclude=\*.{pyc,swp,un~,png,jpg} --exclude-dir=".git" --color "$*" .
 }
+
+function tc {
+    # Just a true caller shortcut
+    open "http://www.truecaller.com/in/$*"
+}
