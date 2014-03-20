@@ -144,3 +144,7 @@ function tc {
     # Just a true caller shortcut
     open "http://www.truecaller.com/in/$*"
 }
+function irc-ext {
+     . ~/ENV/irc-ext/bin/activate
+     cd ~/WIP/irc-ext/
+}
