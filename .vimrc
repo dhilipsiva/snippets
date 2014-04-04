@@ -50,7 +50,6 @@ endif
 "Disable CoffeeSpaceError
 hi link coffeeSpaceError NONE
 let g:syntastic_mode_map={ 'mode': 'active', 'passive_filetypes': ['html'] }
-let python_highlight_all = 1
-
-delc Vsplit
 let g:templates_no_autocmd = 1
+let python_highlight_all = 1
+cabbr <expr> %% expand('%:p:h')
