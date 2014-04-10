@@ -20,6 +20,10 @@ AWS_BUCKET = 'bucket'
 AWS_BASE_URL = 'https://*.cloudfront.net'
 AWS_EXPIRY_TIME = 60 * 30  # Half an hour
 AWS_FORCE_HTTP = True
+"""
+`UPLOAD_TO_S3` flag to tell if the files are needed to be uploaded to S3.
+During development, set this to `False`. And set to `True` in production.
+"""
 UPLOAD_TO_S3 = False
 MEDIA_URL = ""
 
@@ -82,7 +86,8 @@ def process_file(file):
         return file
 
 """
-Model configuration
+File: myapp/models.py
+File Model configuration
 """
 from django.db import models
 
@@ -90,25 +95,27 @@ AWS_PREFIX = AWS_BASE_URL + MEDIA_URL
 
 
 class Model:
+    """
+    This is the djngo model that you have file associated with.
+    Here I am assuming that `_file` is your FileField
+    """
 
+    """
+    Add a `uploaded` BooleanField to mark files if they
+    are uploaded to S3 or not
+    """
     uploaded = models.BooleanField(default=False)
 
-    def get_url(self, size=""):
-        if self.uploaded:
-            filename, extension = self._file.name.rsplit('.', 1)
-            path = AWS_PREFIX + filename
-        else:
-            filename, extension = self._file.url.rsplit('.', 1)
-            path = filename
-        if size:
-            path += "-" + size
-        path += "." + extension
-        return path
-
     @property
-    def url(self):
+    def get_url(self):
         if self.uploaded:
+            """
+            If the file is uploaded, return the temproary URL.
+            """
             return temp_url(self)
+        """
+        Else the file URL or anything that is equivalent
+        """
         return self._file.url
 
 
