@@ -148,3 +148,9 @@ function irc-ext {
      . ~/ENV/irc-ext/bin/activate
      cd ~/WIP/irc-ext/
 }
+
+# Function for my site - dhilipsiva.com
+function site {
+     . ~/ENV/site/bin/activate
+     cd ~/WIP/site/
+}
