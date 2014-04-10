@@ -11,8 +11,10 @@ I do media file upload to S3 very often in various projects.
 So I thought I ll have a script always ready.
 """
 
-# Settings
-
+"""
+File: `myapp/settings.py`
+Settings to be expected in `settings.py` file
+"""
 
 AWS_SECRET_KEY = 'secret_key'
 AWS_ACCESS_KEY = 'access_key'
@@ -27,8 +29,10 @@ During development, set this to `False`. And set to `True` in production.
 UPLOAD_TO_S3 = False
 MEDIA_URL = ""
 
+
 """
 A Wrapper around boto to upload to s3
+File: `s3_uploader.py`
 """
 import os
 from boto.s3.connection import S3Connection
@@ -121,9 +125,10 @@ class MyFileModel(models.Model):
 
 """
 Management command to process existing files.
+File: `myapp/managment/commands/upload_files.py`
+Command: `python manage.py upload_files`
 """
 from django.core.management.base import BaseCommand
-# from myapp.models import MyFileModel
 
 files = MyFileModel.objects.filter(uploaded=False)
 
