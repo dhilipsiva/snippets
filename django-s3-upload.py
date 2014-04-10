@@ -94,9 +94,9 @@ from django.db import models
 AWS_PREFIX = AWS_BASE_URL + MEDIA_URL
 
 
-class Model:
+class MyFileModel(models.Model):
     """
-    This is the djngo model that you have file associated with.
+    This is the django model that you have file associated with.
     Here I am assuming that `_file` is your FileField
     """
 
@@ -123,9 +123,9 @@ class Model:
 Management command to process existing files.
 """
 from django.core.management.base import BaseCommand
-from files.models import File
+# from myapp.models import MyFileModel
 
-files = File.objects.filter(uploaded=False)
+files = MyFileModel.objects.filter(uploaded=False)
 
 
 class Command(BaseCommand):
